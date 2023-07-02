@@ -2,7 +2,6 @@ package com.hassan.osama.syed.moviecatalogservice.controller;
 
 import com.hassan.osama.syed.moviecatalogservice.model.CatalogItem;
 import com.hassan.osama.syed.moviecatalogservice.model.Movie;
-import com.hassan.osama.syed.moviecatalogservice.model.Rating;
 import com.hassan.osama.syed.moviecatalogservice.model.dto.RatingDto;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,8 +16,8 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/catalog")
 public class MovieCatalogController {
-    private final static String MOVIE_INFO_SERVICE_URL = "http://localhost:8081/movies/";
-    private final static String RATING_INFO_SERVICE_URL = "http://localhost:8082/ratings/users/";
+    private final static String MOVIE_INFO_SERVICE_URL = "http://movie-info-service/movies/";
+    private final static String RATING_INFO_SERVICE_URL = "http://rating-service/ratings/users/";
     private final RestTemplate restTemplate;
 
     public MovieCatalogController(RestTemplate restTemplate) {
