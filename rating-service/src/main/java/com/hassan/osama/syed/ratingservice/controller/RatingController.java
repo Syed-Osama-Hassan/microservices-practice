@@ -21,8 +21,8 @@ public class RatingController {
     @GetMapping("/users/{userId}")
     public RatingDto getRatingsByUserId(@PathVariable String userId) {
         List<Rating> ratings = List.of(
-                new Rating("1", 4),
-                new Rating("2", 5)
+                new Rating("Italian Spiderman", 4),
+                new Rating("Superman, Spiderman or Batman", 5)
         );
         return new RatingDto(ratings);
     }
